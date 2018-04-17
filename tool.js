@@ -8,7 +8,7 @@ class Tool {
     static get EARLIEST() {return 2;}
     static yyyymmdd() {
         let today = new Date();
-        return `${today.getYear()+1900}${today.getMonth()+1}${today.getDate()}`;
+        return `${today.getYear()+1900}${`0${today.getMonth()+1}`.slice(-2)}${`0${today.getDate()}`.slice(-2)}`;
     }
     static version(versionString) {
         return new Version(versionString);
